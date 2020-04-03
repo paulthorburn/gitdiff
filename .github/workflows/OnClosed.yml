@@ -20,3 +20,4 @@ jobs:
     - name: Run a multi-line script
       run: |
         git diff-tree --no-commit-id --name-only -r ${{ github.sha }}
+        git diff --name-only origin/master 
