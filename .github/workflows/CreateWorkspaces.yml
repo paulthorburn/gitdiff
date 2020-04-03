@@ -20,17 +20,8 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v1
-
-    - name: get changed files
-      id: getfile
-      run: |
-        echo "::set-output name=files::$(git diff-tree --no-commit-id --name-only -r ${{ github.sha }} | xargs)"
-
-    - name: echo output
-      run: |
-        echo ${{ steps.getfile.outputs.files }}
-          
+    - uses: actions/checkout@v2
+         
     # Runs a set of commands using the runners shell
     - name: Run a multi-line script
       run: |
