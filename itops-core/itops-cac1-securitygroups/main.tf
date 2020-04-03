@@ -3,6 +3,7 @@ asdf
 adasdf
 asdf
 asdf
+asdf
         gitdiff=$(git diff-tree --no-commit-id --name-only -r ${{ github.sha }})
         echo Here are the recently modified files
         echo $gitdiff
