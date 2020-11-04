@@ -30,5 +30,5 @@ jobs:
 
       - name: UML files considered echo output
         run: |
-          git diff-tree -r --no-commit-id --name-only ${{ github.sha }}
+          git diff-tree -r -M --no-commit-id --name-only ${{ github.sha }}
         
