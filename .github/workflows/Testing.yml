@@ -26,7 +26,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: echo "$(git diff-tree -r --no-commit-id --name-only ${{ github.sha }} )"
+        run: echo "$(git diff-tree -r --no-commit-id ${{ github.sha }} )"
 
       - name: UML files considered echo output
         run: |
