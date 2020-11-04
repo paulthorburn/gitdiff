@@ -26,4 +26,5 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: git diff --name-only master
+        run: echo "::set-output name=files::$(git diff-tree -r --no-commit-id --name-only ${{ github.sha }} )"
+
