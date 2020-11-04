@@ -26,4 +26,4 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: git diff --diff-filter=am origin/master HEAD
+        run: git diff-tree --no-commit-id --name-only -r ${{ github.sha }}
